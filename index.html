@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+  <main class="main">
+    <h1 class="main__title">Our Pricing</h1>
+    <div class="toggle-container">
+      <span>Annually</span>
+      <span>
+        <input type="checkbox" name="toggle" id="toggle" unchecked />
+        <label for="toggle">
+          <div class="ball"></div>
+        </label>
+      </span>
+      <span>Monthly</span>
+    </div>
+
+    <section class="cards" id="flexy">
+      <article class="card card-1">
+        <h2 class="card__title">Basic</h2>
+        <span class="card__price"> &dollar;19.99</span>
+        <span class="card__price-y"> &dollar;199.99</span>
+        <div class="card__benefits">
+          <p class="benefit">500 GB Storage</p>
+          <p class="benefit">2 Users Allowed</p>
+          <p class="benefit">Send up to 3 GB</p>
+        </div>
+        <div class="card__button">
+          <a href="#" class="cta"> Learn More</a>
+        </div>
+      </article>
+      <article class="card card-m card-2">
+        <h2 class="card__title">Professional</h2>
+        <span class="card__price"> &dollar;24.99</span>
+        <span class="card__price-y"> &dollar;249.99</span>
+        <div class="card__benefits">
+          <p class="benefit">1 TB Storage</p>
+          <p class="benefit">5 Users Allowed</p>
+          <p class="benefit">Send up to 10 GB</p>
+        </div>
+        <div class="card__button">
+          <a href="#" class="cta cta-m"> Learn More</a>
+        </div>
+      </article>
+      <article class="card card-3">
+        <h2 class="card__title">Master</h2>
+        <span class="card__price"> &dollar;39.99</span>
+        <span class="card__price-y"> &dollar;399.99</span>
+        <div class="card__benefits">
+          <p class="benefit">2 TB Storage</p>
+          <p class="benefit">10 Users Allowed</p>
+          <p class="benefit">Send up to 20 GB</p>
+        </div>
+        <div class="card__button">
+          <a href="#" class="cta"> Learn More</a>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+<script src="assets/js/index.js"></script>
+</html>

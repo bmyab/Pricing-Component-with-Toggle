@@ -1,0 +1,50 @@
+@media screen and (min-width:1024px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/bg-top.svg')no-repeat right top,
+    url('../images/bg-bottom.svg') no-repeat left bottom;
+    background-color: var(--VeryLightGrayishBlue);
+  }
+  .main{
+    width: 90%;
+    margin-inline:auto;
+    background-image: none;
+  }
+  .main__title{
+    padding-block-start: 0;
+  }
+  .cards{
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 0;
+  }
+ 
+}
+
+@media screen and (min-width:1200px) {
+  .cards{
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-block-start: 8rem;
+    z-index: 1;
+  }
+  .cards .card{
+    width: 100%;
+    max-width: 40rem;
+    padding-block: 5rem;
+    margin-block: 2rem;
+    position: relative;
+  }
+  .cards .card-m{
+    margin: 0;
+    padding-block: 7rem;
+    z-index: 100;
+
+  }
+ 
+  
+}

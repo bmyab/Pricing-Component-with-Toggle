@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+:root{
+
+  --LinearGradient1: hsl(236, 72%, 79%);
+  --LinearGradient2 : hsl(237, 63%, 64%);
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 1.5rem;
+  width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--VeryLightGrayishBlue);
+}
+.main{
+  text-align: center;
+  height: 70vh;
+  background-image: url('../images/bg-top.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 200px;
+  background-position-y: -30px;
+  
+}
+.main__title{
+  color: var(--GrayishBlue);
+  padding-block: 4rem;
+}
+.toggle-container {
+	color: hsl(234, 14%, 74%);
+	margin-bottom: 40px;
+}
+
+.toggle-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.toggle-container label {
+	background-image: linear-gradient(
+		to right,
+		hsl(236, 72%, 79%),
+		hsl(237, 63%, 64%)
+	);
+	border-radius: 50px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 15px;
+	position: relative;
+	height: 30px;
+	width: 60px;
+}
+
+.toggle-container label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2.5px;
+	left: 2.5px;
+	height: 24px;
+	width: 24px;
+	transition: transform 0.4s ease;
+}
+
+.toggle-container input {
+	position: absolute;
+	left: -9999px;
+}
+
+
+.toggle-container input:checked + label .ball {
+	transform: translateX(25px);
+}
+
+.toggle-container input:checked  + label{
+  background-image: linear-gradient(
+		to right,
+		hsl(236, 72%, 79%),
+		hsl(236, 72%, 79%)
+	);
+}
+
+
+.cards{
+  display: grid;
+  gap: 3rem;
+  margin-block: 5rem;
+}
+.cards .card{
+  width: calc(100% - 15%);
+  max-width: 35rem;
+  margin-inline: auto;
+  padding-block: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  color: var(--GrayishBlue);
+  background-color: white;
+  text-align: center;
+  border-radius: 0.8rem;
+}
+
+.cards .card-m{
+  background:linear-gradient(270deg,var(--LinearGradient2),var(--LinearGradient1));
+  color: var(--VeryLightGrayishBlue);
+}
+.cards .card-m .card__price{
+  color: var(--VeryLightGrayishBlue);
+}
+.cards .card-m .card__price-y{
+  color: var(--VeryLightGrayishBlue);
+
+}
+.card__price{
+  font-size: 5rem;
+  color: var(--DarkGrayishBlue);
+  display: none;
+}
+.card__price-y{
+  font-size: 5rem;
+  color: var(--DarkGrayishBlue);
+}
+.card__benefits .benefit:nth-child(1){
+  border-top: 1px solid var(--VeryLightGrayishBlue);
+}
+.card-m .card__benefits .benefit:nth-child(1){
+  border-top: 1px solid var(--LightGrayishBlue);
+}
+.card__benefits .benefit{
+  width: 80%;
+  margin-inline: auto;
+  padding-block:1.5rem;
+  border-bottom: 1px solid var(--VeryLightGrayishBlue);
+}
+.card-m .card__benefits .benefit{
+  border-bottom: 1px solid var(--LightGrayishBlue);
+ 
+}
+.show-monthly .card .card__price {
+	display: block;
+}
+.show-monthly .card .card__price-y {
+	display: none;
+}
+.card__button{
+  margin-inline:auto;
+  width: 80%;
+}
+.cta{
+  display:inline-block;
+  width: 100%;
+  padding: 1.5rem;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 400;
+
+  color: var(--VeryLightGrayishBlue);
+  background: linear-gradient(var(--LinearGradient1), var(--LinearGradient2));
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+  border: 1px solid var(--VeryLightGrayishBlue);
+
+  transition: color 0.1s ease-in;
+}
+.cta:hover{
+  border: 1px solid var(--LinearGradient2);
+  background: transparent;
+  color: var(--LinearGradient2);
+}
+.cta.cta-m{
+  color: var(--LinearGradient2);
+  background: var(--VeryLightGrayishBlue);
+  border: 1px solid transparent;
+
+}
+.cta.cta-m:hover{
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+}
